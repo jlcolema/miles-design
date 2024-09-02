@@ -1,0 +1,194 @@
+
+/*-------------------------------------------
+	Layouts
+-------------------------------------------*/
+
+
+html {}
+
+body {
+	
+	@media screen and (min-width: 500px) {
+
+		padding-top: 100px;
+
+		&#about,
+		&#team,
+		&#space,
+		&#capabilities,
+		&#testimonials,
+		&#client-list,
+		&.parent-pageid-18,
+		&.single-staff { padding-top: 160px; }
+
+	}
+	
+}
+
+	#header {}
+
+	.content-wrap {
+	
+		background: url(../img/background.png);
+	
+	}
+
+	#secondary-nav {}
+
+	#carousel {}
+
+	#content {
+
+		.wrap {
+
+			padding-top: 20px;
+			padding-bottom: 20px;
+
+			background: rgb(229, 229, 229);
+
+			@media screen and (min-width: 400px) {
+			
+				.home & {
+			
+					padding-top: 30px;
+			
+				}
+
+			}
+
+			@media screen and (min-width: 750px) {
+
+				padding-top: 30px;
+				padding-bottom: 30px;
+				@include group;
+
+				.home & {}
+
+			}
+
+		}
+
+	}
+
+		#main {
+
+			@media screen and (min-width: 750px) {
+			
+				float: left;
+				width: 69.28508384819%;
+				padding-right: 44px;
+
+				#home & {
+				
+					float: none;
+					display: table-cell;
+					vertical-align: top;
+				
+				}
+
+				// Individual project page
+
+				.single-work & {
+
+					position: relative;
+					float: none;
+					width: auto;
+					padding: 0 292px 0 0;
+
+				}
+
+				.single-staff & {
+
+					position: relative;
+					float: none;
+					width: auto;
+					padding: 0 30.71491615181% 0 0;
+
+				}
+
+				#space & {
+
+					position: relative;
+					float: none;
+					width: auto;
+					padding: 0 34.59841129744% 0 0;
+
+				}
+
+				#client-list & {
+				
+					position: relative;
+					float: none;
+					width: auto;
+					padding: 0 0 0 34.59841129744%;
+				
+				}
+
+				// Blog and individual articles
+
+				#blog &,
+				.single-post &,
+				.search &,
+				.archive &,
+				#error & {
+				
+					float: right;
+					padding: 0 0 0 45px;
+	
+				}
+
+				#contact &,
+				#about &,
+				#testimonials & {
+				
+					padding-right: 0;
+				
+				}
+
+			}
+
+			@media screen and (min-width: 960px) {
+			
+				.single-work & {
+				
+					padding-right: 392px;
+				
+				}
+			
+			}
+
+			// Some #main sections never float. Let's override those here.
+
+			// Work, Team
+
+			#work &,
+			#team & {
+
+				float: none;
+				width: auto;
+				padding: 0;
+				
+			}
+
+		}
+		
+		#secondary {
+
+			@media screen and (min-width: 750px) {
+			
+				float: left;
+				width: 30.71491615181%;
+
+				#home & {
+				
+					float: none;
+					display: table-cell;
+					vertical-align: top;
+				
+				}
+			
+			}
+
+		}
+
+	#footer {}

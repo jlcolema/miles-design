@@ -1,0 +1,413 @@
+
+/*-------------------------------------------
+	Footer
+-------------------------------------------*/
+
+
+#footer {
+
+	@include font-size(12);
+	line-height: (20/12) + em;
+	background: rgb(255, 255, 255);
+
+	.wrap {
+
+		max-width: none;
+		padding: 0;
+
+
+		@media screen and (min-width: 740px) {
+		
+			max-width: 1213px;
+			padding: 0 40px;
+		
+		}
+
+	}
+
+		.inner-wrap {
+			
+			@media screen and (min-width: 740px) {
+			
+				padding: 20px 0 30px 0;
+				display: table;
+				@include group;
+			
+			}
+
+		}
+
+			.testimonial,
+			.connect,
+			.contact {
+
+				color: rgb(153, 153, 153);
+
+				&.active {
+				
+					h4 {
+
+						border-bottom: 1px solid rgb(204, 204, 204);
+				
+						.toggle { background-image: url(../img/close.png); }
+						
+					}
+					
+					.container { display: block; }
+				
+				}
+
+				@media screen and (min-width: 740px) {
+				
+					display: table-cell;
+					width: 34.59841129744%;
+					padding: 3px 43px 0 54px;
+					border-left: 1px solid rgb(187, 187, 187);
+					vertical-align: top;
+
+					&:hover {
+
+						color: rgb(102, 102, 102);
+						border-color: rgb(102, 102, 102);
+
+						h4 {
+						
+							a { color: rgb(102, 102, 102); }
+						
+						}
+					
+					}
+				
+				}
+
+			}
+
+			.testimonial {
+
+				@media screen and (min-width: 740px) {
+				
+					background: url(../img/icons/testimonials.png) 10px 0 no-repeat;
+
+					&:hover {
+					
+						background-image: url(../img/icons/testimonials-hover.png);
+					
+					}
+				
+				}
+
+				h4 {
+
+					a {
+					
+						background-image: url(../img/icons/testimonials-hover.png);
+
+						@media screen and (min-width: 740px) {
+						
+							background: none;
+						
+						}
+					
+					}
+				
+				}
+
+				cite {
+				
+					display: block;
+					margin-top: 10px;
+					
+				}
+
+			}
+			
+			.connect {
+
+				@media screen and (min-width: 740px) {
+
+					width: 30.80317740512%;
+					padding: 3px 0 0 54px;
+					background: url(../img/icons/connect.png) 10px 0 no-repeat;
+
+					&:hover {
+					
+						background-image: url(../img/icons/connect-hover.png);
+					
+					}
+
+				}
+				
+				h4 {
+
+					a {
+
+						background-image: url(../img/icons/mark.png);
+
+						@media screen and (min-width: 740px) {
+						
+							background: none;
+						
+						}
+
+					}
+					
+				}
+
+				.container {}
+
+					ul {
+						
+						@include group;
+						
+					}
+					
+						li {
+
+							float: left;
+							margin: 0 18px 0 0;
+							@include hide-text;
+
+							@media screen and (min-width: 740px) {
+							
+								margin: 0 18px 18px 0;
+							
+							}
+
+							&.twitter {
+							
+								a {
+
+									background-image: url(../img/icons/twitter-large.png);
+
+									@include retina {
+									
+										background-image: url(../img/icons/twitter-large@2x.png);
+									
+									}
+
+									&:hover { background-color: rgb(0, 204, 255); }
+									
+								}
+							
+							}
+
+							&.linkedin {
+							
+								a {
+
+									background-image: url(../img/icons/linkedin-large.png);
+
+									@include retina {
+									
+										background-image: url(../img/icons/linkedin-large@2x.png);
+									
+									}
+
+									&:hover { background-color: rgb(0, 153, 255); }
+
+								}
+
+							}
+
+							&.facebook {
+							
+								a {
+
+									background-image: url(../img/icons/facebook-large.png);
+
+									@include retina {
+									
+										background-image: url(../img/icons/facebook-large@2x.png);
+									
+									}
+
+									&:hover { background-color: rgb(0, 153, 204); }
+									
+								}
+							
+							}
+
+							&.google {
+							
+								a {
+
+									background-image: url(../img/icons/google-large.png);
+
+									@include retina {
+									
+										background-image: url(../img/icons/google-large@2x.png);
+									
+									}
+
+									&:hover { background-color: rgb(187, 51, 51); }
+									
+								}
+
+							}
+
+							&.blog {
+							
+								a {
+
+									background-image: url(../img/icons/blog-large.png);
+
+									@include retina {
+									
+										background-image: url(../img/icons/blog-large@2x.png);
+									
+									}
+
+									&:hover { background-color: rgb(102, 102, 102); }
+									
+								}
+
+							}
+
+							&:last-child { margin: 0; }
+
+							a {
+
+								display: block;
+								width: 32px;
+								height: 32px;
+								padding: 0 0 0 24px;
+								background-color: rgb(187, 187, 187);
+
+								@include retina {
+								
+									background-size: 32px 32px;
+								
+								}
+								
+								&:hover {}
+
+							}
+
+						}
+
+			}
+
+			.contact {
+				
+				@media screen and (min-width: 740px) {
+
+					background: url(../img/icons/contact-us.png) 10px 0 no-repeat;
+
+					&:hover {
+					
+						a { color: rgb(102, 102, 102); }
+						background-image: url(../img/icons/contact-us-hover.png);
+					
+					}
+
+				}
+				
+			}
+
+				h4 {
+
+					position: relative;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					border-top: 1px solid rgb(204, 204, 204);
+
+					@media screen and (min-width: 740px) {
+
+						margin: 0 0 15px 0;
+						color: rgb(187, 187, 187);
+						border: none;
+					
+					}
+
+					a {
+
+						display: block;
+						height: 60px;
+						padding: 18px 60px 0 65px;
+						color: rgb(187, 187, 187);
+						background: url(../img/icons/contact.png) 20px center no-repeat;
+
+						@media screen and (min-width: 740px) {
+						
+							height: auto;
+							padding: 0;
+							background: none;
+						
+						}
+
+						&:hover {}
+						
+					}
+
+						.toggle {
+
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 60px;
+							height: 60px;
+							background: url(../img/open.png) center center no-repeat;
+							border-left: 1px dotted rgb(229, 229, 229);
+							@include hide-text;
+							cursor: pointer;
+							z-index: 5;
+
+							@media screen and (min-width: 740px) {
+							
+								display: none;
+							
+							}
+
+						}
+
+				}
+
+				.container {
+
+					display: none;
+					padding: 20px;
+
+					@media screen and (min-width: 740px) {
+					
+						display: block;
+						padding: 0;
+					
+					}
+
+				}
+
+					.vcard {
+					
+						.fn { display: none; }
+					
+					}
+
+					blockquote {}
+
+						cite {}
+
+					ul {
+	
+						margin: 0;
+	
+						li {}
+						
+					}
+	
+					p {
+					
+						margin: 0;
+						
+						&#copyright { margin: 10px 0 0 0; }
+						
+					}
+					
+						a {
+
+							color: rgb(153, 153, 153);
+
+							&:hover {}
+							
+						}
+
+}

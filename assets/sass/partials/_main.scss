@@ -1,0 +1,2901 @@
+
+/*-------------------------------------------
+	Main
+-------------------------------------------*/
+
+
+#main {
+	
+	#home & {
+
+		color: rgb(102, 102, 102);
+
+		@media screen and (min-width: 750px) {
+		
+			border-right: 1px solid rgb(153, 153, 153);
+		
+		}
+ 	
+		.group {
+		
+			margin-top: 25px;
+
+			@media screen and (min-width: 550px) {
+			
+				display: table;
+			
+			}
+			
+		}
+	
+	}
+
+	#work & {
+	
+		@media screen and (min-width: 400px) {
+		
+			margin-bottom: -70px;
+		
+		}
+	
+	}
+
+	#team & {
+	
+		@media screen and (min-width: 400px) {
+		
+			margin-bottom: -50px;
+		
+		}
+	
+	}
+
+}
+
+	// Content
+
+	.content {
+		
+		#about &,
+		.single-staff & {
+
+			@media screen and (min-width: 750px) {
+			
+				padding-right: 44px;
+			
+			}
+		
+		}
+
+		#testimonials & {
+
+			margin-bottom: 22px;
+			border-bottom: 1px solid rgb(51, 51, 51);
+		
+			@media screen and (min-width: 750px) {
+			
+				margin-right: 44px;
+			
+			}
+		
+		}
+		
+	}
+
+		h1 {
+		
+			&.page-title {
+				
+				body.testimonials & { display: none; }
+				
+			}
+
+			#home #main & {
+
+				margin-top: -7px;
+				color: rgb(102, 102, 102);
+				@include truman-light;
+			
+			}
+
+			.single-work & {
+			
+				@include font-size(21);
+				line-height: (24/21) + em;
+				@include truman-light;
+			
+			}
+			
+		}
+
+		// Name/Position on Individual Staff Member Page
+
+		.name {
+
+			.single-staff & {
+
+				margin-bottom: 13px;
+				@include font-size(21);
+				line-height: (24/21) + em;
+				@include truman-light;
+
+				@media screen and (min-width: 740px) {
+				
+					display: none;
+				
+				}
+
+			}
+
+		}
+		
+		.position {
+
+			.single-staff & {
+
+				margin-bottom: 10px;
+				@include font-size(14);
+				line-height: (24/14) + em;
+				text-transform: uppercase;
+				@include truman;
+
+				@media screen and (min-width: 740px) {
+				
+					display: none;
+				
+				}
+
+			}
+
+		}
+
+	// Back To
+
+	.back-to {
+
+		margin-bottom: 20px;
+		@include truman;
+		@include font-size(14);
+		line-height: (20/14) + em;
+		text-transform: lowercase;
+
+		a {
+
+			color: rgb(153, 153, 153);
+
+			&:hover {}
+
+		}
+
+			span {
+
+				position: relative;
+				top: 2px;
+				display: inline-block;
+				width: 9px;
+				height: 16px;
+				margin-right: 5px;
+				background: url(../img/back-to.png);
+				@include hide-text;
+
+			}
+
+			strong {
+
+				text-transform: uppercase;
+
+			}
+
+	}
+
+	// Hero
+
+	.hero {
+
+		margin-bottom: 20px;
+
+		@media screen and (min-width: 750px) {
+
+			#about &,
+			#testimonials & {
+			
+				padding-right: 43px;
+				border-right: 1px solid rgb(153, 153, 153);
+			
+			}
+
+			.single-staff & {
+	
+				padding-right: 43px;
+				border-right: 1px solid rgb(0, 153, 204);
+	
+			}
+	
+			#single-april-miles & { border-color: #ff6fb3; }
+
+			#single-brian-gray & { border-color: #ff5a00; }
+
+			#single-jon-mcclure & { border-color: #bbff00; }
+
+			#single-kolby-mcelvain & { border-color: #ff6851; }
+
+			#single-cole-farrell & { border-color: #FF6666; }
+
+			#single-marco-boulais & { border-color: #CC3333; }
+
+			#single-laurie-schneider & { border-color: #6666CC; }
+
+		}
+
+		img { display: block; }
+
+	}
+
+	// Projects
+
+	.projects {
+
+		#home & {
+		
+			padding-bottom: 7px;
+			border-bottom: 1px solid rgb(153, 153, 153);
+		
+		}
+
+		@media screen and (min-width: 400px) {
+
+			text-align: justify;
+			@include placeholder;
+
+		}
+
+	}
+
+		.project {
+
+			margin: 0 0 20px 0;
+
+			&.placeholder,
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+			@media screen and (min-width: 400px) {
+
+				display: inline-block;
+				width: 47.09851551957%;
+				margin-bottom: 25px;
+				vertical-align: top;
+				text-align: left;
+			
+			}
+
+			@media screen and (min-width: 800px) {
+			
+				width: 30.80317740512%;
+				margin-bottom: 35px;
+
+				.home & { margin: 0; }
+			
+			}
+
+			a {
+
+				position: relative;
+				display: block;
+				overflow: hidden;
+
+				&:hover {
+
+					img {
+
+						&.client-logo {
+
+							opacity: 0;
+
+						}
+
+					}
+
+					.overlay {
+
+						bottom: 0;
+						opacity: 1;
+
+					}
+
+						h3 {}
+
+				}
+
+			}
+
+				img {
+
+					display: block;
+
+					&.client-logo {
+
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 1;
+						@include transition(opacity 0.45s);
+						z-index: 5;
+
+						.touch & { display: none; }
+
+					}
+
+				}
+
+				.overlay {
+
+					position: absolute;
+					bottom: -100%;
+					left: 0;
+					width: 100%;
+					padding: 16px 15px 20px 15px;
+					background: rgba($black, 0.25);
+					opacity: 0;
+					@include transition(bottom 0.30s, opacity 1.25s);
+					z-index: 10;
+
+					@media screen and (max-width: 600px) {
+					
+						padding: 11px 15px 15px 15px;
+					
+					}
+
+					.touch & {
+
+						bottom: 0;
+						opacity: 1;
+
+					}
+
+				}
+
+					h3 {
+
+						@include font-size(18);
+						line-height: (24/18) + em;
+						color: $white;
+
+					}
+
+		}
+
+	// Team
+
+	#members {
+
+		@media screen and (min-width: 400px) {
+
+			text-align: justify;
+			@include placeholder;
+
+		}
+
+	}
+
+		.member {
+
+			margin: 0 0 20px 0;
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+			@media screen and (min-width: 400px) {
+
+				display: inline-block;
+				width: 47.09851551957%;
+				margin-bottom: 25px;
+				vertical-align: top;
+				text-align: left;
+			
+			}
+
+			@media screen and (min-width: 800px) {
+			
+				width: 30.80317740512%;
+				margin-bottom: 35px;
+			
+			}
+
+			a {
+
+				position: relative;
+				display: block;
+				overflow: hidden;
+
+				&:hover {
+
+					img {
+						
+						&.photo {
+						
+							opacity: 0;
+						
+						}
+						
+					}
+
+					.overlay {
+
+						bottom: 0;
+						opacity: 1;
+
+					}
+
+						h3 {}
+
+				}
+
+			}
+
+				img {
+				
+					display: block;
+					
+					&.photo {
+					
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 1;
+						@include transition(opacity 0.45s);
+						z-index: 5;
+						
+						.touch & { display: none; }
+
+					}	
+
+				}
+
+				.overlay {
+
+					position: absolute;
+					bottom: -100%;
+					left: 0;
+					width: 100%;
+					// padding: 16px 15px 18px 15px;
+					padding: 6px 15px 7px 15px;
+					opacity: 0;
+					background: rgba($black, 0.25);
+					@include transition(bottom 0.30s, opacity 1.25s);
+					-webkit-font-smoothing: antialiased;
+					z-index: 99;
+
+					.touch & {
+
+						bottom: 0;
+						opacity: 1;
+						background: none;
+
+					}
+
+				}
+
+					h3 {
+
+						@include font-size(18);
+						line-height: (24/18) + em;
+						color: $white;
+
+					}
+
+					h4 {
+
+						@include font-size(12);
+						line-height: (24/12) + em;
+						color: $white;
+						text-transform: lowercase;
+
+					}
+
+		}
+
+	// CTA
+
+	// This defines a generic CTA (case study, whitepaper, etc.).
+
+	.cta {
+
+		@include font-size(12);
+		line-height: (20/12) + em;
+		margin: 0 0 20px 0;
+
+		a {
+
+			display: block;
+			padding: 20px;
+			color: $white;
+			background: rgb(170, 170, 170);
+			@include transition(background 0.35s);
+			@include group;
+
+			&:hover {
+			
+				background: rgb(71, 160, 190);
+			
+			}
+
+			#home & {
+			
+				position: relative;
+				padding-bottom: 40px;
+
+				@media screen and (max-width: 549px) {
+				
+					height: auto !important;
+				
+				}
+
+			}
+
+		}
+
+		@media screen and (min-width: 550px) {
+
+			#home & {
+
+				display: table-cell;
+				width: 50%;
+				margin: 0;
+
+				&:nth-child(1) {
+				
+					padding: 0 21px 0 0;
+				
+				}
+
+				&:nth-child(2) {
+				
+					padding: 0 0 0 21px;
+				
+				}
+
+			}
+		
+		}
+
+		// Touch devices remain blue
+
+		.touch &,
+		&:hover {
+
+			a {
+
+				// background: rgb(71, 160, 190);
+
+			}
+
+		}
+
+		.title {
+
+			margin-bottom: 15px;
+			@include font-size(18);
+			line-height: (22/18) + em;
+
+		}
+
+		.icon {
+
+			float: right;
+			width: 90px;
+			height: 110px;
+			margin: 3px 0 20px 10px;
+			overflow: hidden;
+
+			img {}
+		
+		}
+
+		.more {
+
+			@include font-size(10);
+			line-height: (16/10) + em;
+			text-transform: uppercase;
+
+			#home & {
+			
+				position: absolute;
+				bottom: 20px;
+				left: 20px;
+				right: 20px;
+				z-index: 5;
+			
+			}
+
+			strong {
+
+				display: block;
+				height: 20px;
+				padding: 1px 5px 0 5px;
+				color: $white;
+				background: url(../img/arrow-banner.png) right 0 no-repeat;
+				border-left: 1px solid $white;
+
+			}
+
+		}
+
+	}
+
+	// Form
+
+	form {
+
+		margin: 0 0 25px 0;
+
+		@media screen and (min-width: 750px) {
+
+			#contact & {
+	
+				padding-right: 44px;
+			
+			}
+
+		}
+
+		fieldset {}
+
+			legend {}
+
+			ol,
+			ul {
+
+				#main & {
+
+					list-style: none;
+					padding: 0;
+
+				}
+
+			}
+
+				li {
+
+					margin: 0 0 15px 0;
+
+					&#field_1_1 {
+						
+						float: left;
+						width: 50%;
+						padding: 0 10px 0 0;
+						
+					}
+
+					&#field_1_2 {
+						
+						float: left;
+						width: 50%;
+						padding: 0 0 0 10px;
+						
+					}
+
+					&#field_1_6 {
+					
+						clear: both;
+					
+					}
+
+				}
+
+					label {
+
+						display: block;
+						margin: 0 0 3px 0;
+
+					}
+
+						input {}
+
+						textarea {
+
+							min-height: 100px;
+
+						}
+
+						button {}
+
+	}
+
+	// Map
+
+	#map {
+
+		margin: 0 0 20px 0;
+
+		@media screen and (min-width: 750px) {
+		
+			padding-right: 44px;
+			border-right: 1px solid rgb(153, 153, 153);
+		
+		}
+
+		#map-wrap {
+		
+			width: 100%;
+			height: 300px;
+
+			@media screen and (min-width: 750px) {
+			
+				height: 380px;
+			
+			}
+		
+		}
+
+	}
+
+	// Work Overview
+
+	.overview {
+	
+		@media screen and (min-width: 750px) {
+		
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 34.59841129744%;
+			padding: 35px 0 0 45px;
+			z-index: 5;
+
+			.single-work & {
+			
+				width: 292px;
+			
+			}
+
+			#space &,
+			#testimonials & {
+			
+				padding-top: 0;
+			
+			}
+
+			#client-list & {
+			
+				right: auto;
+				left: 0;
+				padding: 0 45px 0 0;
+			
+			}
+		
+		}
+
+		@media screen and (min-width: 960px) {
+		
+			.single-work & {
+			
+				width: 392px;
+			
+			}
+		
+		}
+
+		.overview-overview {
+			
+			@media screen and (min-width: 750px) {
+			
+				position: fixed;
+				top: 0;
+			
+			}
+			
+		}
+
+			.overview-inner {
+
+				@media screen and (max-width: 749px) {
+
+					// When stacked vertically, fixed positioning is not needed.
+				
+					position: static !important;
+				
+				}
+	
+				@media screen and (min-width: 750px) {
+	
+					width: 247px;
+					padding-top: 164px;
+					padding-bottom: 20px;
+	
+				}
+
+				@media screen and (min-width: 960px) {
+				
+					width: 347px;
+				
+				}
+
+			}
+
+			.category {
+			
+				margin-bottom: 17px;
+				@include font-size(14);
+				line-height: (24/14) + em;
+				@include truman;
+				text-transform: uppercase;
+
+				@media screen and (max-width: 739px) { display: none; }
+			
+			}
+
+	}
+
+	// Work Samples
+
+	.samples {}
+
+		.sample {
+
+			margin-bottom: 20px;
+
+			&:last-of-type { margin: 0; }
+
+			img {}
+
+			.category {
+				
+				@media screen and (min-width: 750px) {
+				
+					display: none;
+				
+				}
+				
+			}
+
+		}
+
+	// Connect
+
+	.connect {
+
+		.single-staff #main & {
+		
+			@include font-size(12);
+			line-height: (20/12) + em;
+		
+		}
+
+		@media screen and (min-width: 750px) {
+
+			#about #secondary &,
+			#testimonials #secondary & {
+			
+				position: relative;
+				padding: 36px 0 0 54px;
+
+				&:before {
+				
+					position: absolute;
+					left: 28px;
+					top: 40px;
+					content: "";
+					width: 10px;
+					height: 20px;
+					background: rgb(153, 153, 153) url(../img/staff-arrow.png);
+					z-index: 5;
+
+					@include retina {
+					
+						background-size: 10px 20px;
+						background-image: url(../staff-arrow@2x.png);
+					
+					}
+			
+				}
+			
+			}
+		
+			.single-staff #main & {
+			
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 30.71491615181%;
+				padding: 71px 0 0 54px;
+				z-index: 5;
+
+				&:before {
+				
+					position: absolute;
+					left: 28px;
+					top: 76px;
+					content: "";
+					width: 10px;
+					height: 20px;
+					background: #00b3cd url(../img/staff-arrow.png);
+					z-index: 5;
+
+					@include retina {
+					
+						background-size: 10px 20px;
+						background-image: url(../staff-arrow@2x.png);
+					
+					}
+			
+				}
+			
+			}
+
+			#single-josh-miles #main & {
+			
+				&:before {
+			
+					background-color: #00b3cd;
+
+				}
+
+			}
+
+			#single-april-miles #main & {
+			
+				&:before {
+			
+					background-color: #ff6fb3;
+
+				}
+
+			}
+
+			#single-brian-gray #main & {
+			
+				&:before {
+			
+					background-color: #ff5a00;
+
+				}
+
+			}
+
+			#single-jon-mcclure #main & {
+			
+				&:before {
+			
+					background-color: #bbff00;
+
+				}
+
+			}
+
+			#single-kolby-mcelvain #main & {
+			
+				&:before {
+			
+					background-color: #ff6851;
+
+				}
+
+			}
+
+			#single-cole-farrell #main & {
+			
+				&:before {
+					
+					background-color: #FF6666;
+					
+				}
+
+			}
+
+			#single-marco-boulais #main & {
+			
+				&:before {
+					
+					background-color: #CC3333;
+					
+				}
+
+			}
+
+			#single-laurie-schneider #main & {
+			
+				&:before {
+					
+					background-color: #6666CC;
+					
+				}
+
+			}
+
+		}
+
+		.name {
+
+			margin-bottom: 13px;
+			@include font-size(21);
+			line-height: (24/21) + em;
+			@include truman-light;
+
+			.single-staff #main & {
+
+				display: none;
+
+				@media screen and (min-width: 740px) { display: block; }
+			
+			}
+
+		}
+		
+		.position {
+
+			margin-bottom: 10px;
+			@include font-size(14);
+			line-height: (24/14) + em;
+			text-transform: uppercase;
+			@include truman;
+
+			.single-staff #main & {
+
+				display: none;
+			
+				@media screen and (min-width: 740px) { display: block; }
+			
+			}
+
+		}
+		
+		.connect-with {
+			margin-bottom: 10px;
+			@include font-size(14);
+			line-height: (20/14) + em;
+			@include truman-light;
+			}
+
+		h3 {
+		
+			#about & {
+			
+				margin-bottom: 15px;
+				@include font-size(21);
+				line-height: (24/21) + em;
+				@include truman-light;
+			
+			}
+		
+		}
+
+		h4 {
+
+			@include truman-light;
+
+			#secondary & { margin: 0 0 20px 0; }
+
+		}
+
+		ul {
+		
+			margin: 0;
+
+			#main & {
+			
+				padding: 0;
+				list-style: none;
+			
+			}
+	
+		}
+
+			li {
+
+				margin: 0 0 10px 0;
+
+				&:last-child { margin: 0; }
+
+				&.twitter {
+
+					a {
+
+						background: url(../img/icons/twitter.png) left center no-repeat;
+
+						&:hover { background-image: url(../img/icons/twitter-hover.png); }
+
+					}
+
+				}
+
+				&.linkedin {
+
+					a {
+
+						background: url(../img/icons/linkedin.png) left center no-repeat;
+
+						&:hover { background-image: url(../img/icons/linkedin-hover.png); }
+
+					}
+
+				}
+
+				&.facebook {
+
+					a {
+
+						background: url(../img/icons/facebook.png) left center no-repeat;
+
+						&:hover { background-image: url(../img/icons/facebook-hover.png); }
+
+					}
+
+				}
+
+				&.google {
+
+					a {
+
+						background: url(../img/icons/google.png) left center no-repeat;
+
+						&:hover { background-image: url(../img/icons/google-hover.png); }
+
+					}
+
+				}
+
+				&.amazon {
+
+					a {
+
+						background: url(../img/icons/amazon.png) left center no-repeat;
+
+						&:hover { background-image: url(../img/icons/amazon-hover.png); }
+
+					}
+
+				}
+
+				&.dribbble {
+
+					a {
+
+						background: url(../img/icons/dribbble.png) left center no-repeat;
+
+						&:hover { background-image: url(../img/icons/dribbble-hover.png); }
+
+					}
+
+				}
+
+				&.instagram {
+
+					a {
+
+						background: url(../img/icons/instagram.png) left center no-repeat;
+
+						&:hover { background-image: url(../img/icons/instagram-hover.png); }
+
+						@include retina {
+						
+							background-size: 16px 16px;
+							background-image: url(../img/icons/instagram@2x.png);
+							
+							&:hover {
+							
+								background-image: url(../img/icons/instagram-hover@2x.png);
+								
+							}
+						
+						}
+
+					}
+
+				}
+
+			}
+
+				a {
+
+					display: block;
+					height: 20px;
+					padding: 0 0 0 24px;
+					color: $black;
+
+					&:hover {}
+
+				}
+
+	}
+
+	// Article
+	
+	// Need to fix this
+
+	#main article {
+
+		margin: 0 0 50px 0;
+
+		.single-post & {
+		
+			margin-bottom: 35px;
+
+			@media screen and (min-width: 750px) {
+			
+				margin-bottom: 50px;
+			
+			}
+		
+		}
+
+		h1 {
+
+			padding: 0 0 10px 0;
+			border-bottom: 1px solid rgb(102, 102, 102);
+			color: rgb(102, 102, 102);
+			@include truman-light;
+
+			.single-post & { margin: 0; }
+
+			a {
+
+				color: rgb(102, 102, 102);
+
+				&:hover {}
+				
+			}
+			
+		}
+
+		h2 {
+		
+			@include font-size(18);
+			line-height: (24/18) + em;
+		
+		}
+
+		h3 { text-transform: uppercase; }
+
+		p {
+		
+			@include font-size(14);
+			line-height: (24/14) + em;
+		
+		}
+
+		.featured {
+
+			margin: 0 0 20px 0;
+
+			img { margin: 0; }
+			
+		}
+
+		img {
+		
+			margin-bottom: 20px;	
+			display: block;
+
+			.single-post & {
+			
+				max-width: 100% !important;
+				height: auto !important;
+			
+			}
+			
+		}
+
+		.more {
+
+			margin: 0 0 20px 0;
+			text-transform: uppercase;
+
+			a {
+
+				color: rgb(0, 160, 180);
+
+				&:hover {}
+				
+			}
+		
+		}
+
+		blockquote {
+			
+			padding: 0 40px;
+			@include truman-light-italic;
+
+			p {}
+
+		}
+
+		footer {
+
+			padding: 5px 0 7px 0;
+			// border-top: 1px solid rgb(102, 102, 102);
+			// border-bottom: 1px solid rgb(102, 102, 102);
+			// color: rgb(102, 102, 102);
+			border-top: 1px solid rgb(170, 170, 170);
+			border-bottom: 1px solid rgb(170, 170, 170);
+			color: rgb(170, 170, 170);
+			@include group;
+
+			.single-post & {
+			
+				margin: 0 0 20px 0;
+				border-top: none;
+
+			border-bottom: 1px solid rgb(102, 102, 102);
+			color: rgb(102, 102, 102);
+				
+			}
+			
+		}
+		
+			.author {
+				
+				float: left;
+				margin: 0;
+				
+			}
+			
+			time {
+				
+				float: right;
+				
+			}
+	
+	}
+
+	// Testimonials
+
+	blockquote {
+	
+		#testimonials & {
+
+			@include font-size(12);
+			line-height: (20/12) + em;
+			margin-bottom: 30px;
+
+			// &:last-of-type { margin-bottom: 0; }
+
+			@media screen and (min-width: 750px) {
+			
+				margin-right: 44px;
+			
+			}
+		
+		}
+
+		h2 {
+
+			#testimonials & {
+			
+				margin-bottom: 12px;
+			
+			}
+		
+		}
+
+		p {
+		
+			#testimonials & {
+			
+				margin-bottom: 10px;
+			
+			}
+		
+		}
+
+		cite {
+		
+			#testimonials & {
+			
+			
+			
+			}
+		
+		}
+	
+	}
+
+	// Clients
+
+	.clients {
+
+		padding: 0 !important;
+		overflow: hidden;
+
+		@media screen and (min-width: 420px) {
+
+			-webkit-column-count: 2;
+			-webkit-column-gap: 30px;
+
+			-moz-column-count: 2;
+			-moz-column-gap: 30px;
+
+			column-count: 2;
+			column-gap: 30px;
+
+			vertical-align: top;
+
+		}
+
+		@media screen and (min-width: 860px) {
+		
+			-webkit-column-count: 3;
+			-webkit-column-gap: 30px;
+		
+		}
+
+		li {
+
+			margin: 15px 0 0 0;
+
+			&:first-child { margin-top: 0; }
+
+			@media screen and (min-width: 420px) {
+
+				margin: 15px 0 0 0;
+			
+			}
+
+			@media screen and (min-width: 860px) {}
+
+		}
+	
+	}
+
+	// Share
+
+	.share-icons {
+	
+		ul {
+		
+			#main & {
+			
+				list-style: none;
+				padding: 0;
+			
+			}
+		
+		}
+	
+	}
+
+	.share {
+	
+		ul {
+		
+			#main & {
+			
+				list-style: none;
+				padding: 0;
+			
+			}
+		
+		}
+	
+	}
+
+// Need to organize
+
+// Share
+
+.share-icons {
+
+	@include group;
+
+	ul {
+		float: right;
+		@include group;
+		}
+
+		li {
+
+			float: left;
+			margin-left: 5px;
+
+			&.comments {
+				
+				.share {
+					
+					background-position: -96px 0;
+					
+					@include retina { background-position: -96px -8px; }
+					
+				}
+
+				&:hover {
+				
+					.share {}
+					
+				}
+
+			}
+
+			&.twitter {
+				
+				.share {}
+
+				&:hover {
+				
+					.share { background-color: rgb(0, 204, 255); }
+					
+				}
+
+			}
+
+			&.linkedin {
+
+				.share {
+				
+					background-position: -16px 0;
+
+					@include retina { background-position: -16px -8px; }	
+						
+				}
+
+				&:hover {
+				
+					.share { background-color: rgb(0, 153, 255); }
+					
+				}
+
+			}
+			
+			&.facebook {
+
+				.share {
+				
+					background-position: -32px 0;
+
+					@include retina { background-position: -32px -8px; }	
+								
+				}
+
+				&:hover {
+				
+					.share { background-color: rgb(0, 153, 204); }
+					
+				}
+
+			}
+			
+			&.googleplus {
+
+				.share {
+			
+					background-position: -48px 0;
+			
+					@include retina { background-position: -48px -8px; }
+				
+				}
+
+				&:hover {
+				
+					.share { background-color: rgb(187, 51, 51); }
+					
+				}
+
+			}
+			
+			&.pinterest {
+
+				.share {
+			
+					background-position: -80px 0;
+			
+					@include retina { background-position: -80px -8px; }
+				
+				}
+
+				&:hover {
+				
+					.share { background-color: rgb(187, 51, 51); }
+					
+				}
+
+			}
+		
+		}
+
+			.box { @include group; }
+
+				.count {
+
+					position: relative;
+					float: right;
+					display: block;
+					color: rgb(102, 102, 102);
+					@include font-size(9);
+					line-height: (16/9) + em;
+					height: 16px;
+					text-align: center;
+					min-width: 16px;
+					padding: 0 5px;
+					background: $white;
+
+					&:hover {}
+					
+				}
+
+				.share {
+
+					float: right;
+					color: $white;
+					background: rgb(102, 102, 102) url(../img/social.png);
+					display: block;
+					height: 16px;
+					line-height: 30px;
+					text-align: center;
+					text-decoration: none;
+					width: 16px;
+					@include hide-text;
+
+					@include retina {
+						background-size: 128px 24px;
+						background-position: 0 -8px;
+						}
+					
+					&:hover {}
+					
+				}
+
+}
+
+div.share {
+
+	margin-bottom: 10px;
+
+	&:last-of-type {
+		padding: 9px 0;
+		border-bottom: 1px solid rgb(102, 102, 102);
+		}	
+
+	ul { margin: 0; }
+
+}
+
+// Footer Meta (Author Info on individual article page)
+
+#main article .meta {
+
+	position: relative;
+	margin-bottom: 10px;
+	padding: 15px 15px 15px 110px;
+	background: rgb(204, 204, 204);
+	min-height: 100px;
+
+	.author-info { @include group; }
+
+		.author-avatar {
+
+			position: absolute;
+			left: 15px;
+			top: 15px;
+			z-index: 5;
+
+			img {
+				width: 80px;
+				height: 80px;
+				}
+			
+		}
+		
+		.author-description {
+			
+			h2 {
+				float: left;
+				display: inline;
+				margin: 0 0 7px 0;
+				@include font-size(14);
+				line-height: (14/14) + em;
+				@include truman-light;
+				}
+			
+			ul {
+				display: inline-block;
+				margin: 0 0 0 10px;
+				@include group;
+				}
+			
+				li {
+
+					float: left;
+					margin-right: 8px;
+					@include hide-text;
+
+					&.twitter {
+						
+						a { background-color: rgb(0, 204, 255); }
+						
+					}
+					
+					&.linkedin {
+						
+						a {
+						
+							background-position: -16px 0;
+							background-color: rgb(0, 153, 255);
+						
+							@include retina { background-position: -16px -8px; }
+						
+						}
+						
+					}
+					
+					&.facebook {
+						
+						a {
+
+							background-position: -32px 0;
+							background-color: rgb(0, 153, 204);
+
+							@include retina { background-position: -32px -8px; }
+
+						}
+						
+					}
+					
+					&.google {
+						
+						a {
+
+							background-position: -48px 0;
+							background-color: rgb(187, 51, 51);
+
+							@include retina { background-position: -48px -8px; }
+
+						}
+						
+					}
+
+					&.amazon {
+						
+						a {
+
+							background-position: -64px 0;
+							background-color: rgb(244, 129, 32);
+
+							@include retina { background-position: -64px -8px; }
+
+						}
+						
+					}
+
+					&.dribbble {
+						
+						a {
+
+							background-position: -144px 0;
+							background-color: rgb(244, 129, 32);
+
+							@include retina { background-position: -144px -8px; }
+
+						}
+						
+					}
+
+					&.instagram {
+						
+						a {
+
+							background: url(../img/icons/instagram-hover.png);
+
+							@include retina {
+							
+								background-size: 16px 16px;
+								background-image: url(../img/icons/instagram-hover@2x.png);
+								
+							}
+
+						}
+						
+					}
+
+					a {
+
+						display: block;
+						width: 16px;
+						height: 16px;
+						background: url(../img/social.png);
+
+						@include retina {
+							background-size: 128px 24px;
+							background-position: 0 -8px;
+							}
+
+					}
+
+				}
+			
+			h3 {
+				clear: both;
+				margin: 0 0 5px 0;
+				@include font-size(12);
+				line-height: (14/10) + em;
+				@include truman-light;
+				}
+
+			p {
+				
+				&:last-child { margin: 0; }
+				
+			}
+			
+		}
+
+}
+
+// Prev/Next between Team Members
+
+.single-staff {
+
+	.nav-browse {
+	
+		margin-top: 30px;
+		margin-bottom: 20px;
+		@include group;
+	
+		@media screen and (min-width: 750px) {
+		
+			margin-top: 0;
+			margin-bottom: 0;
+		
+		}
+	
+		div {
+	
+			width: 50%;
+	
+			@media screen and (min-width: 750px) {
+				position: fixed;
+				top: 50%;
+				width: auto;
+				margin-top: -20px;
+				z-index: 9999;
+				}
+	
+			&.prev {
+	
+				float: left;
+				padding-right: 10px;
+	
+				@media screen and (min-width: 750px) {
+				
+					left: 0;
+					float: none;
+					padding: 0;
+					
+				}
+	
+				a {
+	
+					&:hover {
+					
+						.name {
+						
+							@media screen and (min-width: 750px) {
+						
+								left: 0;
+							
+							}
+							
+						}
+						
+					}
+
+					.view-next-prev {
+					
+						padding: 8px 14px 0 40px;
+					
+					}
+	
+					.name {
+	
+						padding: 8px 14px 0 40px;
+						@include transition(left .15s linear);
+	
+						@media screen and (min-width: 750px) {
+						
+							left: -200px;
+						
+						}
+	
+					}
+	
+					.arrow {
+					
+						left: 0;
+						background-image: url(../img/prev-arrow.png);
+	
+						@include retina {
+						
+							background-size: 40px 40px;
+							background-image: url(../img/prev-arrow@2x.png);
+						
+						}
+						
+					}
+	
+				}
+	
+			}
+	
+			&.next {
+	
+				float: right;
+				padding-left: 10px;
+	
+				@media screen and (min-width: 750px) {
+				
+					right: 0;
+					float: none;
+					padding: 0;
+					
+				}
+	
+				a {
+	
+					&:hover {
+					
+						.name {
+						
+							@media screen and (min-width: 750px) {
+							
+								right: 0;
+							
+							}	
+							
+						}
+						
+					}
+
+					.view-next-prev {
+					
+						text-align: right;
+						padding: 8px 40px 0 14px;
+					
+					}
+	
+					.name {
+	
+						text-align: right;
+						padding: 8px 40px 0 14px;
+						@include transition(right .15s linear);
+	
+						@media screen and (min-width: 750px) {
+						
+							right: -200px;
+							text-align: left;
+						
+						}
+	
+					}
+				
+					.arrow {
+	
+						right: 0;
+						background-image: url(../img/next-arrow.png);
+	
+						@include retina {
+						
+							background-size: 40px 40px;
+							background-image: url(../img/next-arrow@2x.png);
+						
+						}
+	
+					}
+	
+				}
+	
+			}
+	
+			&.prev,
+			&.next {
+	
+				&.josh-miles {
+	
+					a {
+				
+						&:hover {
+	
+							background-color: #00b3cd;
+		
+							@media screen and (min-width: 750px) {
+							
+								background-color: rgb(204, 204, 204);
+							
+							}
+							
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+							
+									background-color: #00b3cd;
+								
+								}
+								
+							}
+	
+						}
+					
+					}
+	
+				}
+	
+				&.april-miles {
+	
+					a {
+				
+						&:hover {
+	
+							background-color: #ff6fb3;
+		
+							@media screen and (min-width: 750px) {
+							
+								background-color: rgb(204, 204, 204);
+							
+							}
+							
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+								
+									background-color: #ff6fb3;
+									
+								}
+								
+							}
+	
+						}
+					
+					}
+	
+				}
+	
+				&.brian-k-gray {
+	
+					a {
+	
+						&:hover {
+	
+							background-color: #ff5a00;
+		
+							@media screen and (min-width: 750px) {
+							
+								background-color: rgb(204, 204, 204);
+							
+							}
+	
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+							
+									background-color: #ff5a00;
+							
+								}		
+									
+							}
+	
+						}
+					
+					}
+	
+				}
+	
+				&.jon-mcclure {
+	
+					a {
+				
+						&:hover {
+	
+							background-color: #bbff00;
+		
+							@media screen and (min-width: 750px) {
+							
+								background-color: rgb(204, 204, 204);
+							
+							}
+							
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+							
+									background-color: #bbff00;
+								
+								}
+									
+							}
+	
+						}
+					
+					}
+	
+				}
+		
+				&.kolby-mcelvain {
+	
+					a {
+				
+						&:hover {
+	
+							background-color: #ff6851;
+		
+							@media screen and (min-width: 750px) {
+							
+								background-color: rgb(204, 204, 204);
+							
+							}
+							
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+							
+									background-color: #ff6851;
+									
+								}
+									
+							}
+	
+						}
+					
+					}
+	
+				}
+
+				&.cole-farrell {
+	
+					a {
+				
+						&:hover {
+	
+							background-color: #FF6666;
+		
+							@media screen and (min-width: 750px) {
+							
+								background-color: rgb(204, 204, 204);
+							
+							}
+							
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+							
+									background-color: #FF6666;
+									
+								}
+									
+							}
+	
+						}
+					
+					}
+	
+				}
+
+				&.marco-boulais {
+	
+					a {
+				
+						&:hover {
+	
+							background-color: #CC3333;
+		
+							@media screen and (min-width: 750px) {
+							
+								// background-color: rgb(204, 204, 204);
+							
+							}
+							
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+							
+									background-color: #CC3333;
+									
+								}
+									
+							}
+	
+						}
+					
+					}
+	
+				}
+
+				&.laurie-schneider {
+	
+					a {
+				
+						&:hover {
+	
+							background-color: #6666CC;
+		
+							@media screen and (min-width: 750px) {
+							
+								// background-color: rgb(204, 204, 204);
+							
+							}
+							
+							.name,
+							.arrow {
+							
+								@media screen and (min-width: 750px) {
+							
+									background-color: #6666CC;
+									
+								}
+									
+							}
+	
+						}
+					
+					}
+	
+				}
+	
+			}
+	
+		}
+	
+			a {
+	
+				position: relative;
+				display: block;
+				height: 40px;
+				background: rgb(204, 204, 204);
+				@include transition(background-color .35s);
+				@include group;
+	
+				@media screen and (min-width: 750px) {
+				
+					@include transition(none);
+				
+				}
+
+				.view-next-prev {
+
+					display: block;
+					height: 40px;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					color: $white;
+					white-space: nowrap;
+					z-index: 100;
+				
+					@media screen and (min-width: 750px) {
+					
+						display: none;
+					
+					}
+				
+				}
+	
+				.name {
+	
+					display: none;
+					height: 40px;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					color: $white;
+					white-space: nowrap;
+					z-index: 100;
+	
+					@media screen and (min-width: 750px) {
+
+						display: block;
+						position: absolute;
+						top: 0;
+						float: none;
+						background: rgb(204, 204, 204);
+						@include transition(background-color .35s);
+					
+					}
+	
+					.single-post & { display: none; }
+	
+				}
+	
+				.arrow {
+	
+					position: absolute;
+					top: 0;
+					display: block;
+					width: 40px;
+					height: 40px;
+					// background: url(../img/arrows.png) 0 -36px;
+					@include hide-text;
+					z-index: 105;
+	
+					@media screen and (min-width: 750px) {
+					
+						background-color: rgb(204, 204, 204);
+						@include transition(background-color .35s);
+	
+					}
+	
+				}
+	
+				&:hover {
+				
+					// background: rgb(0, 153, 204);
+	
+					.arrow {
+					
+						.single-post & { background-color: rgb(0, 153, 204); }
+					
+					}
+					
+				}
+	
+			}
+	
+	}
+
+}
+
+// Prev/Next between Work
+
+.single-work {
+
+	.nav-browse {
+	
+		margin-top: 30px;
+		margin-bottom: 20px;
+		@include group;
+	
+		@media screen and (min-width: 750px) {
+		
+			margin-top: 0;
+			margin-bottom: 0;
+		
+		}
+	
+		div {
+	
+			width: 50%;
+	
+			@media screen and (min-width: 750px) {
+				position: fixed;
+				top: 50%;
+				width: auto;
+				margin-top: -20px;
+				z-index: 9999;
+				}
+	
+			&.prev {
+	
+				float: left;
+				padding-right: 10px;
+	
+				@media screen and (min-width: 750px) {
+				
+					left: 0;
+					float: none;
+					padding: 0;
+					
+				}
+	
+				a {
+
+					&:hover {
+					
+						.name {
+						
+							@media screen and (min-width: 750px) {
+						
+								left: 0;
+							
+							}
+							
+						}
+						
+					}
+
+					.view-next-prev {
+
+						padding: 8px 14px 0 40px;
+
+					}
+	
+					.name {
+	
+						padding: 8px 14px 0 40px;
+						@include transition(left .15s linear);
+	
+						@media screen and (min-width: 750px) {
+						
+							left: -200px;
+						
+						}
+	
+					}
+	
+					.arrow {
+					
+						left: 0;
+						background-image: url(../img/prev-arrow.png);
+
+						@include retina {
+						
+							background-size: 40px 40px;
+							background-image: url(../img/prev-arrow@2x.png);
+						
+						}
+						
+					}
+	
+				}
+	
+			}
+	
+			&.next {
+	
+				float: right;
+				padding-left: 10px;
+	
+				@media screen and (min-width: 750px) {
+				
+					right: 0;
+					float: none;
+					padding: 0;
+					
+				}
+	
+				a {
+	
+					&:hover {
+					
+						.name {
+						
+							@media screen and (min-width: 750px) {
+							
+								right: 0;
+							
+							}	
+							
+						}
+						
+					}
+
+					.view-next-prev {
+					
+						text-align: right;
+						padding: 8px 40px 0 14px;
+					
+					}
+	
+					.name {
+	
+						text-align: right;
+						padding: 8px 40px 0 14px;
+						@include transition(right .15s linear);
+	
+						@media screen and (min-width: 750px) {
+						
+							right: -200px;
+							text-align: left;
+						
+						}
+	
+					}
+				
+					.arrow {
+	
+						right: 0;
+						background-image: url(../img/next-arrow.png);
+	
+						@include retina {
+						
+							background-size: 40px 40px;
+							background-image: url(../img/next-arrow@2x.png);
+						
+						}
+	
+					}
+	
+				}
+	
+			}
+	
+			&.prev,
+			&.next {}
+	
+		}
+	
+			a {
+	
+				position: relative;
+				display: block;
+				height: 40px;
+				background: rgb(204, 204, 204);
+				@include transition(background-color .35s);
+				@include group;
+
+				@media screen and (min-width: 750px) {
+				
+					@include transition(none);
+				
+				}
+
+				.view-next-prev {
+
+					display: block;
+					height: 40px;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					color: $white;
+					white-space: nowrap;
+					z-index: 100;
+				
+					@media screen and (min-width: 750px) {
+					
+						display: none;
+					
+					}
+				
+				}
+
+				.name {
+	
+					display: none;
+					height: 40px;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					color: $white;
+					white-space: nowrap;
+					z-index: 100;
+	
+					@media screen and (min-width: 750px) {
+	
+						display: block;
+						position: absolute;
+						top: 0;
+						float: none;
+						// background-color: rgb(204, 204, 204);
+						@include transition(background-color .35s);
+					
+					}
+	
+				}
+	
+				.arrow {
+	
+					position: absolute;
+					top: 0;
+					display: block;
+					width: 40px;
+					height: 40px;
+					// background: url(../img/arrows.png) 0 -36px;
+					// background-color: rgb(204, 204, 204);
+					@include hide-text;
+					z-index: 105;
+	
+					@media screen and (min-width: 750px) {
+
+						background-color: rgb(204, 204, 204);
+						@include transition(background-color .35s);
+	
+					}
+	
+				}
+
+				&:hover {
+
+					background-color: rgb(0, 160, 180);
+
+					@media screen and (min-width: 750px) {
+
+						.view-next-prev {
+						
+							background-color: rgb(0, 160, 180);
+						
+						}
+					
+						.arrow {
+							
+							background-color: rgb(0, 160, 180);
+							
+						}
+	
+						.name {
+						
+							background-color: rgb(0, 160, 180);
+						
+						}
+
+					}
+
+				}
+	
+			}
+	
+	}
+
+}
+
+// Prev/Next between Articles
+
+.single-post {
+
+	.nav-browse {
+	
+		margin-top: 20px;
+		margin-bottom: 30px;
+		@include group;
+	
+		@media screen and (min-width: 750px) {
+		
+			margin-top: 0;
+			margin-bottom: 0;
+		
+		}
+	
+		div {
+	
+			width: 50%;
+	
+			@media screen and (min-width: 750px) {
+				position: fixed;
+				top: 50%;
+				width: auto;
+				margin-top: -20px;
+				z-index: 9999;
+				}
+	
+			&.prev {
+	
+				float: left;
+				padding-right: 10px;
+	
+				@media screen and (min-width: 750px) {
+				
+					left: 0;
+					float: none;
+					padding: 0;
+					
+				}
+	
+				a {
+
+					&:hover {
+					
+						.name {
+						
+							@media screen and (min-width: 750px) {
+						
+								left: 0;
+							
+							}
+							
+						}
+						
+					}
+
+					.view-next-prev {
+
+						padding: 8px 14px 0 40px;
+
+					}
+	
+					.name {
+	
+						padding: 8px 14px 0 40px;
+						@include transition(left .15s linear);
+	
+						@media screen and (min-width: 750px) {
+						
+							left: -200px;
+						
+						}
+	
+					}
+	
+					.arrow {
+					
+						left: 0;
+						background-image: url(../img/prev-arrow.png);
+
+						@include retina {
+						
+							background-size: 40px 40px;
+							background-image: url(../img/prev-arrow@2x.png);
+						
+						}
+						
+					}
+	
+				}
+	
+			}
+	
+			&.next {
+	
+				float: right;
+				padding-left: 10px;
+	
+				@media screen and (min-width: 750px) {
+				
+					right: 0;
+					float: none;
+					padding: 0;
+					
+				}
+	
+				a {
+	
+					&:hover {
+					
+						.name {
+						
+							@media screen and (min-width: 750px) {
+							
+								right: 0;
+							
+							}	
+							
+						}
+						
+					}
+
+					.view-next-prev {
+					
+						text-align: right;
+						padding: 8px 40px 0 14px;
+					
+					}
+	
+					.name {
+	
+						text-align: right;
+						padding: 8px 40px 0 14px;
+						@include transition(right .15s linear);
+	
+						@media screen and (min-width: 750px) {
+						
+							right: -200px;
+							text-align: left;
+						
+						}
+	
+					}
+				
+					.arrow {
+	
+						right: 0;
+						background-image: url(../img/next-arrow.png);
+	
+						@include retina {
+						
+							background-size: 40px 40px;
+							background-image: url(../img/next-arrow@2x.png);
+						
+						}
+	
+					}
+	
+				}
+	
+			}
+	
+			&.prev,
+			&.next {}
+	
+		}
+	
+			a {
+	
+				position: relative;
+				display: block;
+				height: 40px;
+				background: rgb(204, 204, 204);
+				@include transition(background-color .35s);
+				@include group;
+
+				@media screen and (min-width: 750px) {
+				
+					@include transition(none);
+				
+				}
+
+				.view-next-prev {
+
+					display: block;
+					height: 40px;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					color: $white;
+					white-space: nowrap;
+					z-index: 100;
+				
+					@media screen and (min-width: 750px) {
+					
+						display: none;
+					
+					}
+				
+				}
+
+				.name {
+	
+					display: none;
+					height: 40px;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					color: $white;
+					white-space: nowrap;
+					z-index: 100;
+	
+					@media screen and (min-width: 750px) {
+	
+						display: block;
+						position: absolute;
+						top: 0;
+						float: none;
+						// background-color: rgb(204, 204, 204);
+						@include transition(background-color .35s);
+					
+					}
+	
+				}
+	
+				.arrow {
+	
+					position: absolute;
+					top: 0;
+					display: block;
+					width: 40px;
+					height: 40px;
+					// background: url(../img/arrows.png) 0 -36px;
+					// background-color: rgb(204, 204, 204);
+					@include hide-text;
+					z-index: 105;
+	
+					@media screen and (min-width: 750px) {
+
+						background-color: rgb(204, 204, 204);
+						@include transition(background-color .35s);
+	
+					}
+	
+				}
+
+				&:hover {
+
+					background-color: rgb(0, 160, 180);
+
+					@media screen and (min-width: 750px) {
+
+						.view-next-prev {
+						
+							background-color: rgb(0, 160, 180);
+						
+						}
+					
+						.arrow {
+							
+							background-color: rgb(0, 160, 180);
+							
+						}
+	
+						.name {
+						
+							background-color: rgb(0, 160, 180);
+						
+						}
+
+					}
+
+				}
+	
+			}
+	
+	}
+
+}

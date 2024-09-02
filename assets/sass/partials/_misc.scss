@@ -1,0 +1,145 @@
+
+/*-------------------------------------------
+	Misc.
+-------------------------------------------*/
+
+// Notes...
+
+
+// Set the max-width of a container
+
+
+.wrap { @include wrap; }
+
+
+// Clear parent of floated elements
+
+
+.group { @include group; }
+
+
+// Float element to the left
+
+
+.alignleft,
+.left {
+	float: left;
+	display: block;
+	margin: 0 15px 15px 0;
+	}
+
+
+// Float element to the right
+
+
+.alignright,
+.right {
+	float: right;
+	display: block;
+	margin: 0 0 15px 15px;
+	}
+
+
+// Change text to uppercase
+
+
+.upper { text-transform: uppercase; }
+
+
+// Set element to its own line
+
+
+.line { display: block; }
+
+
+// Move item off of page (typically for "skip to" links)
+
+
+.move {
+	position: absolute;
+	left: -9999px;
+	}
+
+
+// Hide element
+
+
+.hide { display: none; }
+
+
+// Required form fields
+
+
+.required,
+.gfield_required { color: rgb(255, 153, 0); }
+
+
+// Sticky Footer
+
+/*
+
+#wrapper {
+
+	@media screen and (min-width: 740px) {	
+	
+		display: table;
+		height: 100%;
+		width: 100%;
+
+	}
+	
+}
+
+#page {
+
+	@media screen and (min-width: 740px) {
+	
+		display: table-row;
+		height: 100%;
+
+	}
+	
+}
+
+#footer {
+
+	@media screen and (min-width: 740px) {
+	
+		display: table-row;	
+		
+	}
+
+}
+
+*/
+
+// Screen Size
+
+
+#screen-size {
+
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	color: $white;
+	background: rgb(212, 176, 255);
+	z-index: 9999999;
+
+	div {
+
+		padding: 5px 10px;
+		@include font-size(10);
+		text-transform: uppercase;
+		background: rgb(152, 127, 183);
+		@include truman;
+
+	}
+
+	p {
+	
+		margin: 0;
+		padding: 5px 10px;
+		
+	}
+
+}

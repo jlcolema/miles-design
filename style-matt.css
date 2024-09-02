@@ -1,0 +1,132 @@
+@media only screen and (min-width: 479px) and (max-width: 899px) {
+
+	.projects .row div {
+				
+		width: 48%;					
+		margin-right: 4%;
+		display: inline-block;
+		margin-bottom: 4%;
+	
+	}	
+	
+		.projects .row div:nth-child(even) {
+			
+			margin-right: 0;
+		
+		}
+
+}
+
+@media only screen and (max-width: 899px) {
+
+
+	/* contact page */	
+		.page-template-template-contact-php section .contact {
+		
+			padding-left:0;
+			padding-bottom:25px;
+		
+		}
+	
+			.page-template-template-contact-php section .contact h2:before {
+				
+				background:none;
+				
+			}
+		
+		
+		.page-template-template-contact-php section .row > div:first-child {
+		
+			width:100%;
+		
+		}
+		
+		
+		.page-template-template-contact-php section .row > div:last-child {
+		
+			display:none;
+		
+		}
+	
+	
+	/* about page */
+		.page-template-template-about-php section .row > div:first-child {
+		
+			width:100%;
+		
+		}
+		
+		
+		.page-template-template-about-php section .row > div:last-child {
+		
+			width:100%;
+		
+		}
+		
+			.page-template-template-about-php section .row > div:last-child h2 {
+			
+				display:none;
+			
+			}
+			
+			
+	/* testimonials page */
+		.page-template-template-testimonials-php section .row > div:first-child {
+		
+			display:none;
+		
+		}
+		
+		
+		.page-template-template-testimonials-php section .row > div:last-child {
+		
+			width:100%;
+		
+		}
+		
+		
+	/* capabilities page */
+		.page-template-template-capabilities-php section .row > div:first-child {
+		
+			/* this is temporary - need to flip the order of these divs so the right column can stack below the left */
+			display:none;
+		
+		}
+		
+		.page-template-template-capabilities-php section .row > div:last-child {
+		
+			width:100%;
+		
+		}
+
+}
+
+
+@media only screen and (min-width: 900px) {
+	
+	#secondary-nav a:first-child {
+	
+		padding: 13px 27px 0 27px;
+		white-space: nowrap;
+	
+	}	
+	
+	.page-template-template-contact-php section .cloned {
+	
+		display:none;
+	
+	}
+
+}
+
+#footer .row div.inner-content {
+
+	padding-right:8px;
+	
+}
+
+.project-brief.cloned {
+
+
+
+}

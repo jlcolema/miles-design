@@ -1,0 +1,445 @@
+
+//-------------------------------------------
+//	Colors
+//-------------------------------------------
+
+
+// Grayscale
+
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+
+// Colors in use
+
+// rgb(239, 239, 239);
+// rgb(204, 204, 204);
+// rgb(187, 187, 187);
+// rgb(153, 153, 153);
+// rgb(102, 102, 102);
+// rgb(51, 51, 51);
+
+
+//-------------------------------------------
+//	Sizes
+//-------------------------------------------
+
+
+// $base: 12px;
+// $base-sm: $base/2;
+// $base-med: $base * 2;
+// $base-lg: $base * 3;
+// $base-xl: $base * 4;
+
+// $base-font-size: 14px;
+// $base-font-rem: 1.4rem;
+// $base-line-height: $base-med;
+
+
+//-------------------------------------------
+//	Fonts
+//-------------------------------------------
+
+
+// FS Truman (http://fontdeck.com/typeface/fstrumanweb)
+
+// Notes...
+
+
+// Light
+
+@mixin truman-light {
+
+	font-family: "FS Truman Web Light", Arial, sans-serif;
+	font-weight: 200;
+	font-style: normal;	
+
+}
+
+
+// Light Italic
+
+@mixin truman-light-italic {
+
+	font-family: "FS Truman Web Light Italic", Arial, sans-serif;
+	font-weight: 200;
+	font-style: italic;	
+
+}
+
+
+// Italic
+
+@mixin truman-italic {
+
+	font-family: "FS Truman Web Italic", Arial, sans-serif;
+	font-weight: normal;
+	font-style: italic; 	
+
+}
+
+
+// Regular
+
+@mixin truman {
+
+	font-family: "FS Truman Web Regular", Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;	
+
+}
+
+
+// $headline-text: Helvetica, Arial, sans-serif;
+// $body-text: Helvetica, Arial, sans-serif;
+
+
+//-------------------------------------------
+//	Grid
+//-------------------------------------------
+
+
+// $grid-col: 55px;
+// $grid-gutter: 43px;
+// $grid-num: 12;
+// $max-page-width: ($grid-col * $grid-num) + ($grid-gutter * ($grid-num - 1));
+
+// @mixin percent($col-num: 6, $gutter-num: 4, $context: $max-page-width) {
+
+	// width: percentage((($grid-col * $col-num)+($grid-gutter * $gutter-num))/$context);
+
+// }
+
+// $maxContentWidth: $max-page-width + $grid-gutter;
+
+@mixin wrap {
+
+	max-width: 1173px;
+	margin: 0 auto;
+	padding: 0 20px;
+	// padding: $base $grid-gutter;
+	// @include border-box;
+
+	@media screen and (min-width: 600px) {
+	
+		max-width: 1213px;
+		padding: 0 40px;
+	
+	}
+
+}
+
+// Breakpoints/Queries decided by design
+
+// Use q- format for easy find and replace globally if needed
+
+// $q-320: 320px;
+// $q-400: 400px;
+// $q-600: 600px;
+// $q-1200: 1200px;
+
+
+/*-------------------------------------------
+	General Selectors
+-------------------------------------------*/
+
+
+html {
+
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	// -webkit-font-smoothing: antialiased;
+	// background: $black;
+
+	@media screen and (min-width: 740px) {
+
+		// height: 100%;
+
+	}
+
+}
+
+body {
+
+	@include font-size(14);
+	line-height: (24/14) + em;
+	@include truman-light;
+	color: rgb(51, 51, 51);
+	background: rgb(229, 229, 229);
+
+	@media screen and (min-width: 740px) {
+
+		// height: 100%;
+
+	}
+
+}
+
+/* Block Level */
+
+h1, .alpha {
+	margin-bottom: 20px;
+	@include font-size(24);
+	line-height: (28/24) + em;
+	@include truman;
+}
+
+h2, .beta {
+	// margin-bottom: (n/n) + em;
+	@include font-size(21);
+	line-height: (25/21) + em;
+	@include truman;
+}
+
+h3, .gamma {
+	// margin-bottom: (n/n) + em;
+	@include font-size(18);
+	line-height: (22/18) + em;
+	@include truman;
+}
+
+h4, .delta {
+	// margin-bottom: (n/n) + em;
+	@include font-size(16);
+	line-height: (20/16) + em;
+	// text-transform: uppercase;
+	@include truman;
+}
+
+h5, .epsilon {
+	// margin-bottom: (n/n) + em;
+	@include font-size(14);
+	line-height: (18/14) + em;
+	@include truman;
+}
+
+h6, .zeta {
+
+	// margin-bottom: (n/n) + em;
+	// @include font-size(14);
+	// line-height: (18/14) + em;
+	@include truman;
+
+}
+
+p, ul, dl, ol {
+
+	// font-size: $base-font-size;
+	// line-height: $base-line-height;
+	margin-bottom: 20px;
+
+}
+
+li {}
+
+ul {
+
+	#main & {
+	
+		list-style-type: square;
+		list-style-position: outside;
+		padding-left: 20px;
+	
+	}
+
+	li {}
+
+}
+
+ol {
+
+	#main & {
+	
+		list-style-type: decimal;
+		list-style-position: outside;
+		padding-left: 20px;
+	
+	}
+
+	li {}
+
+}
+
+table {
+
+	// border-collapse: collapse;
+	// border: 2px solid $black;
+
+}
+
+th { @include truman; }
+
+td {}
+
+caption {
+
+	// border: 2px solid $black;
+	// border-bottom: none;
+	// padding: $base $grid-gutter/4;
+
+}
+
+figure {}
+
+figcaption {}
+
+blockquote {
+
+	p {}
+
+}
+
+/* Inline */
+
+i,
+em,
+cite { @include truman-light-italic; }
+
+cite {
+
+	&:before { content: "— "; }
+	
+}
+
+b,
+strong { @include truman; }
+
+a {
+
+	color: rgb(0, 160, 180);
+	text-decoration: none;
+
+	&:link {}
+
+	&:hover,
+	&:focus {}
+
+}
+
+img {
+	// display: block;
+	// margin-bottom: $base;
+	}
+
+code {}
+
+sub, sup {
+	// line-height: 0;
+	}
+
+::-moz-selection {
+	// color: $black;
+	// background: #d88cff;
+	// text-shadow: none;
+}
+
+::selection {
+	// color: $black;
+	// background: #d88cff;
+	// text-shadow: none;
+}
+
+ins {
+	// color: $black;
+	// background-color: #fcd700;
+	// text-decoration: none;
+	}
+
+mark {
+	// color: $black;
+	// background-color: #fcd700;
+	// font-style: italic;
+	// font-weight: bold;
+	}
+
+// Mozilla doesn't style place holders by default
+
+input:-moz-placeholder {}
+
+textarea:-moz-placeholder {}
+
+
+/*-------------------------------------------
+	Forms
+-------------------------------------------*/
+
+
+form {}
+
+fieldset {}
+
+legend {}
+
+label {
+	
+	@include font-size(12);
+	line-height: (20/12) + em;
+	
+}
+
+input {
+
+	width: 100%;
+	padding: 5px 5px 7px 5px;
+	@include truman-light;
+	border: none;
+	@include border-radius(0, 0, 0, 0);
+	@include font-size(12);
+	line-height: (20/12) + em;
+
+	&[type="text"],
+	&[type="search"] {}
+
+	&[type="checkbox"] {}
+
+	&[type="radio"] {}
+
+	&[type="button"],
+	&[type="submit"] {
+
+		width: auto;
+		padding: 5px 50px 7px 50px;
+		@include truman-light;
+		border: none;
+		background: rgb(255, 153, 0);
+		
+	}
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+}
+
+textarea {
+
+	width: 100%;
+	max-width: 100%;
+	padding: 5px 5px 7px 5px;
+	@include truman-light;
+	border: none;
+	@include border-radius(0, 0, 0, 0);
+	@include font-size(12);
+	line-height: (20/12) + em;
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+}
+
+button {
+
+	padding: 7px 50px;
+	@include truman-light;
+	border: none;
+	background: rgb(255, 153, 0);
+	@include font-size(12);
+	line-height: (20/12) + em;
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+}

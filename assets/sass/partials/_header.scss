@@ -1,0 +1,406 @@
+
+/*-------------------------------------------
+	Header
+-------------------------------------------*/
+
+
+#header {
+
+	background: $white;
+
+	// Overflow allows for buttons to be positioned past the right edge
+	// without displaying a horizontal scrollbar.
+
+	overflow: hidden;
+
+	@media screen and (min-width: 500px) {
+	
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 999999;
+	
+	}
+
+	.wrap {
+
+		position: relative;
+		padding-top: 60px;
+		padding-bottom: 10px;
+
+		@media screen and (min-width: 500px) {
+		
+			// padding-top: 15px;
+			// padding-bottom: 10px;
+			height: 100px;
+
+		}
+
+	}
+
+}
+
+	#logo {
+
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		margin: 0 0 10px 0;
+		padding: 10px 12px 10px 12px;
+		background: $white;
+		z-index: 999999;
+
+		@media screen and (min-width: 500px) {
+		
+			position: absolute;
+			width: auto;
+			margin: 0;
+			padding: 0;
+			
+			// Position logo on left edge of section (20px accounts for padding)
+
+			left: 10px;
+			top: 50%;
+			
+			// Center logo vertically
+			
+			margin-top: -20px;
+			z-index: 5;
+
+		}
+
+		@media screen and (min-width: 560px) {
+
+			// Height of logo is 50px at the point.
+
+			margin-top: -25px;
+		
+		}
+
+		@media screen and (min-width: 600px) {
+		
+			left: 30px;
+		
+		}
+
+		a {
+
+			display: block;
+			width: 200px;
+			height: 40px;
+			background: url(../img/logo-small.png);
+			@include hide-text;
+
+			@include retina {
+
+				background-size: 200px 40px;
+				background-image: url(../img/logo-small@2x.png);
+			
+			}
+
+			@media screen and (min-width: 560px) {
+			
+				width: 250px;
+				height: 50px;
+				background: url(../img/logo.png);
+
+				@include retina {
+				
+					background-size: 250px 50px;
+					background-image: url(../img/logo@2x.png);
+				
+				}
+			
+			}
+
+			&:hover {}
+
+		}
+	
+	}
+
+	nav {
+
+		position: relative;
+		left: -7px;
+
+		@media screen and (min-width: 500px) {
+		
+			position: absolute;
+			left: auto;
+			
+			// Position navigation on right edge of section
+			// -10px accounts for padding and last nav item space
+
+			right: 13px;
+			top: 50%;
+
+			// Center primary navigation vertically.
+
+			margin-top: -25px;
+			z-index: 5;
+		
+		}
+
+		@media screen and (min-width: 600px) {
+		
+			right: 33px;
+		
+		}
+
+		@media screen and (min-width: 700px) {
+		
+			right: 10px;
+		
+		}
+
+		ul {
+			
+			margin: 0;
+			@include group;
+			
+		}
+
+			li {
+
+				float: left;
+				margin: 0 10px 0 0;
+				@include font-size(16);
+				line-height: (20/16) + em;
+				text-align: center;
+				text-transform: uppercase;
+
+				&:last-of-type { margin-right: 0; }
+
+				@media screen and (min-width: 500px) {
+
+					margin: 0 10px;
+				
+				}
+
+				&.current-menu-item,
+				&.current-page-ancestor {
+				
+					a {
+					
+						color: rgb(51, 51, 51);
+						
+						.left,
+						.right { opacity: 1; }
+
+						.left { left: 19px; }
+
+						.right { right: 19px; }	
+						
+					}
+				
+				}
+
+				.single-work & {
+
+					&#menu-item-58 {
+					
+						a {
+						
+							color: rgb(51, 51, 51);
+
+							.left,
+							.right { opacity: 1; }
+	
+							.left { left: 19px; }
+	
+							.right { right: 19px; }
+								
+						}
+						
+					}
+				
+				}
+
+				.single-staff & {
+				
+					&#menu-item-57 {
+					
+						a {
+						
+							color: rgb(51, 51, 51);
+						
+							.left,
+							.right { opacity: 1; }
+	
+							.left { left: 19px; }
+	
+							.right { right: 19px; }	
+							
+						}
+					
+					}
+				
+				}
+
+			}
+
+				a {
+
+					position: relative;
+					display: block;
+					height: 30px;
+					padding: 3px 7px 0 7px;
+					color: rgb(153, 153, 153);
+
+					@media screen and (min-width: 500px) {
+					
+						height: 50px;
+						padding: 13px 7px 0 7px;
+					
+					}
+
+					@media screen and (min-width: 700px) {
+					
+						padding: 13px 30px 0 30px;
+
+					}
+
+					.left,
+					.right {
+
+						display: none;
+
+						@media screen and (min-width: 700px) {
+
+							display: block;
+							position: absolute;
+							top: 50%;
+							width: 6px;
+							height: 12px;
+							margin-top: -6px;
+							opacity: 0;
+							background: url(../img/arrows.png);
+							@include transition(opacity 1s);
+							z-index: 5;
+	
+							@include retina { background-size: 80px 78px; }
+
+						}
+
+					}
+
+					.left {
+
+						@media screen and (min-width: 700px) {
+
+							left: 0;
+							@include transition(left .5s, opacity 1s);
+	
+							@include retina { background-position: 0 -6px; }
+
+						}
+
+					}
+
+					.right {
+
+						@media screen and (min-width: 700px) {
+
+							right: 0;
+							background-position: -6px 0;
+							@include transition(right .5s, opacity 1s);
+	
+							@include retina { background-position: -6px -6px; }
+
+						}
+
+					}
+
+					&:hover {
+						
+						color: rgb(51, 51, 51);
+
+						@media screen and (min-width: 700px) {
+
+							.left,
+							.right { opacity: 1; }
+	
+							.left { left: 19px; }
+	
+							.right { right: 19px; }
+						
+						}
+						
+					}
+					
+				}
+
+	}
+
+	#utilities {
+
+		@media screen and (min-width: 500px) { display: none; }
+
+		.toggle {
+
+			position: fixed;
+			right: 20px;
+			top: 15px;
+			width: 30px;
+			height: 30px;
+			background: rgb(171, 171, 171) url(../img/utilities-toggle.png);
+			@include hide-text;
+			cursor: pointer;
+			z-index: 999999;
+
+			@include retina {
+			
+				background-size: 30px 45px;
+				background-position: right bottom;
+			
+			}
+			
+		}
+		
+		ul {
+
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 60px;
+			width: 100%;
+			margin: 0;
+			border-top: 1px solid rgb(204, 204, 204);
+			background: rgb(235, 235, 235);
+			@include group;
+			z-index: 999999;
+
+		}
+
+			li {
+
+				float: left;
+				width: 50%;
+				@include font-size(14);
+				line-height: (20/14) + em;
+				
+			}
+
+				a {
+
+					display: block;
+					height: 50px;
+					padding: 13px 0 0 20px;
+					color: rgb(153, 153, 153);
+
+					&:hover {}
+					
+				}
+
+		&.active {
+		
+			.toggle { background-color: rgb(151, 151, 151); }
+			
+			ul { display: block; }
+		
+		}
+
+	}

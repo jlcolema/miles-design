@@ -1,0 +1,157 @@
+
+/*-------------------------------------------
+	Carousel
+-------------------------------------------*/
+
+
+#carousel {
+
+	.wrap {
+
+		width: 100%;
+		background: rgb(229, 229, 229);
+		
+	}
+
+		.inner-wrap {
+		
+			@include group;
+			padding-top: 30px;
+		
+		}
+
+}
+
+	.photos {
+
+		position: relative;
+		margin-bottom: 25px;
+
+		@media screen and (min-width: 1081px) {
+		
+			float: left;
+			width: 69.28508384819%;
+			margin: 0;
+			padding-right: 44px;
+		
+		}
+
+		.photo { width: 100%; }
+		
+			img { display: block; }
+
+	}
+
+	.details-wrap {
+
+		@media screen and (min-width: 1081px) {
+		
+			float: left;
+			position: relative;
+			min-height: 370px;
+			width: 30.71491615181%;
+			border-left: 1px solid rgb(204, 204, 204);
+				
+		}
+
+		.cycle-slideshow { overflow: hidden; }
+
+	}
+
+		.details {
+
+			@media screen and (min-width: 1081px) {
+
+				min-height: 370px;
+				padding: 36px 0 0 54px;
+				background: url(../img/slide-arrow.png) 28px 40px no-repeat;
+
+			}
+
+			h2 {
+
+				margin-bottom: 20px;
+				@include font-size(21);
+				@include truman-light;
+				line-height: (24/21) + em;
+				color: rgb(51, 51, 51);
+
+			}
+			
+			div {}
+			
+				p {
+					
+					@include font-size(14);
+					line-height: (24/14) + em;
+					color: rgb(51, 51, 51);
+
+					&:last-child { margin: 0; }
+
+				}
+
+		}
+
+		.carousel-pager {
+		
+			opacity: 0;
+			@include transition(opacity 0.35s);	
+
+			.touch & { opacity: 1; }
+
+			#carousel:hover & {
+
+				opacity: 1;
+			
+			}
+
+			.prev,
+			.next {
+			
+				position: absolute;
+				top: 50%;
+				width: 40px;
+				height: 40px;
+				margin-top: -20px;
+				background-color: rgba($black, 0.25);
+				@include hide-text;
+				cursor: pointer;
+				z-index: 9999;
+			
+			}
+	
+			.prev {
+			
+				left: 0;
+				background-image: url(../img/prev-arrow.png);
+
+				@include retina {
+				
+					background-size: 40px 40px;
+					background-image: url(../img/prev-arrow@2x.png);
+				
+				}
+				
+			}
+	
+			.next {
+			
+				right: 0;
+				background-image: url(../img/next-arrow.png);
+
+				@include retina {
+				
+					background-size: 40px 40px;
+					background-image: url(../img/next-arrow@2x.png);
+				
+				}
+
+				@media screen and (min-width: 1081px) {
+				
+					right: 44px;
+				
+				}
+				
+			}
+
+		}

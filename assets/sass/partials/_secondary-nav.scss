@@ -1,0 +1,239 @@
+
+/*-------------------------------------------
+	Secondary Navigation
+-------------------------------------------*/
+
+
+#secondary-nav {
+
+	width: 100%;
+	background: rgb(102, 102, 102);
+	overflow: hidden;
+	z-index: 999999;
+
+	#error & { display: none; }
+
+	@media screen and (min-width: 500px) {
+
+		position: fixed;
+		top: 100px;
+		left: 0;
+	
+	}
+
+	@media screen and (min-width: 660px) {
+
+		padding-top: 3px;
+		padding-bottom: 5px;
+	
+	}
+
+	&.active {
+	
+		.toggle {
+			
+			@include box-shadow(0 1px 5px 0 rgba($black, 0.25));
+
+		}
+
+		ul { display: block; }
+
+	}
+
+	.wrap {
+
+		@include group;
+		padding: 0;
+
+		@media screen and (min-width: 610px) {
+
+			// padding: 0;
+
+		}
+
+	}
+
+		.toggle {
+
+			height: 50px;
+			padding: 14px 20px 0 20px;
+			@include font-size(16);
+			line-height: (20/16) + em;
+			text-transform: uppercase;
+			color: rgb(204, 204, 204);
+			background: rgb(102, 102, 102) url(../img/subnav-toggle.png) right center no-repeat;
+			cursor: pointer;
+
+			@media screen and (min-width: 600px) {
+			
+				padding: 14px 40px 0 40px;
+				background-image: url(../img/subnav-toggle-40.png);
+			
+			}
+
+			@media screen and (min-width: 660px) {
+			
+				display: none;
+			
+			}
+
+		}
+
+		ul {
+
+			display: none;
+			margin: 0;
+
+			@media screen and (min-width: 660px) {
+
+				position: relative;
+				right: 33px;
+				display: block;
+				float: right;
+				@include group;
+			
+			}
+
+			@media screen and (min-width: 890px) {
+
+				right: 10px;
+			
+			}
+
+			li {
+				
+				@include font-size(16);
+				line-height: (20/16) + em;
+				text-transform: uppercase;
+				border-bottom: 1px solid rgb(125, 125, 125);
+
+				&:last-of-type {
+				
+					margin-right: 0;
+					border: none;
+					
+				}
+
+				.single-staff &.page-item-14,
+				&.current_page_item {
+				
+					a {
+					
+						color: rgb(204, 204, 204);
+						
+						.left,
+						.right { opacity: 1; }
+
+						.left { left: 19px; }
+
+						.right { right: 19px; }
+	
+					}
+
+				}
+
+				@media screen and (min-width: 660px) {
+				
+					float: left;
+					margin: 0 10px;
+					text-align: center;
+					border: none;
+				
+				}
+
+			}
+
+				a {
+
+					position: relative;
+					display: block;
+					height: 50px;
+					padding: 14px 20px 0 20px;
+					color: rgb(153, 153, 153);
+
+					@media screen and (min-width: 600px) { padding: 14px 40px 0 40px; }
+
+					@media screen and (min-width: 660px) {
+					
+						padding: 14px 7px 0 7px;
+					
+					}
+
+					@media screen and (min-width: 890px) {
+
+						padding: 14px 30px 0 30px;
+					
+					}
+
+					.left,
+					.right {
+
+						display: none;
+
+						@media screen and (min-width: 890px) {
+
+							display: block;
+							position: absolute;
+							top: 50%;
+							width: 6px;
+							height: 12px;
+							margin-top: -6px;
+							opacity: 0;
+							background: url(../img/arrows.png) -12px 0;
+							@include transition(opacity 1s);
+	
+							@include retina { background-size: 80px 78px; }
+
+						}
+
+					}
+
+					.left {
+
+						@media screen and (min-width: 890px) {
+
+							left: 0;
+							@include transition(left .5s, opacity 1s);
+	
+							@include retina { background-position: -12px -6px; }
+
+						}
+
+					}
+
+					.right {
+
+						@media screen and (min-width: 890px) {
+
+							right: 0;
+							background-position: -18px 0;
+							@include transition(right .5s, opacity 1s);
+	
+							@include retina { background-position: -18px -6px; }
+
+						}
+
+					}
+			
+					&:hover {
+						
+						color: rgb(204, 204, 204);
+
+						@media screen and (min-width: 890px) {
+
+							.left,
+							.right { opacity: 1; }
+		
+							.left { left: 19px; }
+		
+							.right { right: 19px; }
+
+						}
+
+					}
+					
+				}
+	
+		}
+
+}
